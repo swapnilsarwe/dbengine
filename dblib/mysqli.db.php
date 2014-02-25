@@ -57,7 +57,7 @@ class MySQLiDB implements DBInterface
         return $arrResult;
     }
 
-    public function setData ($tablename, $arrData, $id)
+    public function setData($tablename, $arrData, $id = 0)
     {
         $strSQL = '';
         if ($id == 0) {
@@ -78,7 +78,7 @@ class MySQLiDB implements DBInterface
         
         $strSQL = $startSQL . ' ' . $setSQL . ' ' . $whereSQL;
         if (DEBUGSQL) {
-            echo '<!-- ' . $strSQL . ' -->';
+            echo '<!-- ' . $strSQL . ' -->'."\n";
             // echo $strSQL."<br />";
         }
         $this->dbconn->query($strSQL);
@@ -87,4 +87,5 @@ class MySQLiDB implements DBInterface
         }
     }
 }
+
 ?>

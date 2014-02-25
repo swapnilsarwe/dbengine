@@ -5,8 +5,8 @@ interface DBInterface
 
     static function getInstance ($arrConfig);
 
-    function getData ($sql);
+    public function getData ($sql);
 
-    function setData ($table, $arrData, $id);
+    public function setData ($table, $arrData, $id = 0);
 }
 ?>

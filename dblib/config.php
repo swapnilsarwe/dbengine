@@ -1,5 +1,5 @@
 <?php
-define('DEBUGSQL', true);
+define('DEBUGSQL', TRUE);
 require_once ('interface.db.php');
 require_once ('factory.db.php');
 require_once ('mysql.db.php');

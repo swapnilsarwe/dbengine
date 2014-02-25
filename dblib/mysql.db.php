@@ -59,7 +59,7 @@ class MySQLDB implements DBInterface
         return $arrResult;
     }
 
-    public function setData ($arrData, $id)
+    public function setData ($tablename, $arrData, $id = 0)
     {}
 }
 ?>
